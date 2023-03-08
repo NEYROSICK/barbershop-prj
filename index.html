@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>BarberShop</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <nav class="header-nav">
+            <a class="header-link-logo" href="#">
+              <svg class="header-logo">
+                <use href="./img/icons.svg#icon-logo"></use>
+              </svg>
+            </a>
+            <ul class="header-menu">
+              <li><a class="header-link" href="#about-section">Про нас</a></li>
+              <li>
+                <a class="header-link" href="#services-section"
+                  >Послуги і ціни</a
+                >
+              </li>
+              <li>
+                <a class="header-link" href="#masters-section">Майстри</a>
+              </li>
+              <li>
+                <a class="header-link" href="#contact-section">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-contacts">
+            <a class="header-link" href="tel:+380441111111"
+              >+38 044 111 11 11</a
+            >
+            <button class="button-light" type="button" data-modal-open>
+              онлайн-запис
+            </button>
+          </div>
+          <button class="header-burger js-open-menu" type="button">
+            <svg class="burger-icon">
+              <use href="./img/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-backdrop js-menu-container">
+          <div class="mobile-menu">
+            <button class="mobile-close js-close-menu" type="button">
+              <svg class="mobile-close-icon">
+                <use href="./img/icons.svg#icon-burger-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-container">
+            <ul class="hero-socials">
+              <li><a class="socials-link" href="#">Instagram</a></li>
+              <li><a class="socials-link" href="#">Youtube</a></li>
+            </ul>
+            <p class="section-tagline section-tagline-light">
+              Чоловіча перукарня в Києві
+            </p>
+            <h1 class="hero-title">BarberShop</h1>
+            <p class="hero-text">
+              Ми експерти у модних чоловічих стрижках. Працюємо швидко, обережно
+              та зі смаком.
+            </p>
+            <ul class="carousel-controls">
+              <li>
+                <button
+                  class="carousel-button carousel-prev"
+                  type="button"
+                  disabled
+                >
+                  Назад
+                </button>
+              </li>
+              <li>
+                <button class="carousel-button carousel-next" type="button">
+                  Вперед
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="section" id="about-section">
+        <div class="container">
+          <div class="about-container">
+            <div class="about-images">
+              <img
+                src="./img/beard.jpg"
+                width="270px"
+                height="445px"
+                alt="Beard shaving"
+              />
+              <img
+                src="./img/hair-cut.jpg"
+                width="270px"
+                height="445px"
+                alt="Hair-cut process"
+              />
+            </div>
+            <div class="about-content">
+              <h2 class="section-tagline">Про нас</h2>
+              <p class="section-title">Кращий Барбершоп твого міста</p>
+              <p class="about-subtitle">
+                Якщо ти дійсно хочеш додати у свій образ більше впевненості,
+                тобі точно до нас.
+              </p>
+              <p class="about-text">
+                Ми команда, яка ніколи не зупиняється на досягнутому і прагне
+                змін. І коли ти потрапиш до рук нашого майстра, то вже ніколи не
+                зможеш бути тим самим, ми впевнені. Ми команда, яка завжди з
+                клієнтами "на одній хвилі". Тому ми завжди готові вдосконалити
+                кожного, хто до нас приходить! Чекаємо на тебе!
+              </p>
+              <button class="button-light button-dark" type="button">
+                онлайн-запис
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section services-section" id="services-section">
+        <div class="container">
+          <p class="section-tagline section-tagline-light">
+            Проведи час у компанії кращих майстрів
+          </p>
+          <h2 class="section-title section-title-left section-title-light">
+            Послуги і ціни
+          </h2>
+          <ul class="services-list">
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Чоловіча стрижка</h3>
+                <span class="service-price">від 300 грн.</span>
+              </div>
+            </li>
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Стрижка бороди</h3>
+                <span class="service-price">від 200 грн.</span>
+              </div>
+            </li>
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Стрижка вусів</h3>
+                <span class="service-price">від 200 грн.</span>
+              </div>
+            </li>
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Гоління небезпечною бритвою</h3>
+                <span class="service-price">від 200 грн.</span>
+              </div>
+            </li>
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Cтрижка у стажера</h3>
+                <span class="service-price">від 50 грн.</span>
+              </div>
+            </li>
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Стрижка під насадку</h3>
+                <span class="service-price">від 200 грн.</span>
+              </div>
+            </li>
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Дитяча стрижка (до 12 років)</h3>
+                <span class="service-price">від 300 грн.</span>
+              </div>
+            </li>
+            <li class="services-item">
+              <div class="service">
+                <h3 class="service-name">Камуфлювання сивини</h3>
+                <span class="service-price">від 200 грн.</span>
+              </div>
+            </li>
+          </ul>
+          <button class="button-light services-button" type="button">
+            онлайн-запис
+          </button>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container achievements-section">
+          <div class="achievements-container">
+            <ul class="achievements-list">
+              <li class="achievements-item">
+                <div class="point">
+                  <div class="point-container">
+                    <span class="point-value">600</span>
+                  </div>
+                  <p class="point-text">Задоволених клієнтів на день</p>
+                </div>
+              </li>
+              <li class="achievements-item">
+                <div class="point">
+                  <div class="point-container">
+                    <span class="point-value">50</span>
+                  </div>
+                  <p class="point-text">Нагород за відмінний сервіс</p>
+                </div>
+              </li>
+              <li class="achievements-item">
+                <div class="point">
+                  <div class="point-container">
+                    <span class="point-value">20</span>
+                  </div>
+                  <p class="point-text">Найкращих майстрів міста</p>
+                </div>
+              </li>
+              <li class="achievements-item">
+                <div class="point">
+                  <div class="point-container">
+                    <span class="point-value">100</span>
+                  </div>
+                  <p class="point-text">Подарунок постійним клієнтам</p>
+                </div>
+              </li>
+            </ul>
+            <div class="achievements-content">
+              <p class="section-tagline">Стара традиційна школа</p>
+              <h2 class="section-title achievements-title">
+                Чому приходять саме до нас?
+              </h2>
+              <p class="achievements-text">
+                Про нас говорять лише добре. Але краще 1 раз побачити та
+                відчути, ніж 10 разів прочитати.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="section masters-section">
+        <div class="container masters-container">
+          <p class="section-tagline" id="masters-section">
+            для справжніх поціновувачів атмосфери
+          </p>
+          <h2 class="section-title section-title-left">Наші майстри</h2>
+          <ul class="masters-list">
+            <li class="masters-item">
+              <div class="master">
+                <img class="master-picture" src="./img/john-smith.jpg" alt="" />
+                <div class="master-info">
+                  <h3 class="master-name">John Smith</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="masters-item">
+              <div class="master">
+                <img
+                  class="master-picture"
+                  src="./img/michael-doe.jpg"
+                  alt=""
+                />
+                <div class="master-info">
+                  <h3 class="master-name">Michele Doe</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="masters-item">
+              <div class="master">
+                <img class="master-picture" src="./img/alan-black.jpg" alt="" />
+                <div class="master-info">
+                  <h3 class="master-name">Alan Black</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="masters-socials" href="#">
+                        <svg class="socials-icon">
+                          <use href="./img/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- <section class="section">
+        <div class="container">
+          <p class="section-tagline">
+            Латинською мовою "барба" означає "борода"
+          </p>
+          <h2 hidden>Наші роботи</h2>
+          <ul class="portfolio-list">
+            <li>
+              <img
+                src="./img/long-hair-cut.jpg"
+                
+                alt="long man hair-cut"
+              />
+            </li>
+            <li>
+              <img
+                src="./img/man-without-beard.jpg"
+                width="270px"
+                height="360px"
+                alt="sharp knife shaving beard"
+              />
+            </li>
+            <li>
+              <img
+                src="./img/closed-eyes-and-beard.jpg"
+                width="270px"
+                height="360px"
+                alt="closed eyes with towel"
+              />
+            </li>
+            <li>
+              <img
+                src="./img/tatoo-barber-hands.jpg"
+                width="270px"
+                height="360px"
+                alt="barber's hands in work process"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section contact-section" id="contact-section">
+        <div class="container contact-container">
+          <div class="contact-form">
+            <p class="section-title section-title-light section-title-left">
+              Онлайн-запис
+            </p>
+            <form class="form" name="contact-form">
+              <div class="form-container">
+                <div class="form-field">
+                  <label class="visually-hidden" for="user-name"></label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    placeholder="Ім`я*"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="visually-hidden" for="user-phone"
+                    >Телефон*</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="user-phone"
+                    id="user-phone"
+                    placeholder="Телефон*"
+                    pattern="^\+[0-9]{12}"
+                    required
+                  />
+                </div>
+
+                <div class="form-textarea">
+                  <textarea
+                    class="form-input textarea"
+                    name="user-message"
+                    id="user-message"
+                    placeholder=" "
+                  ></textarea>
+                  <label class="form-label" for="user-message">
+                    Повідомлення
+                  </label>
+                </div>
+              </div>
+
+              <button class="button-light form-button" type="submit" disabled>
+                Відправити
+              </button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h2 class="section-title section-title-light">Контакти</h2>
+            <address>
+              <ul class="contact-list">
+                <li>
+                  <a class="contact-link" href="#">
+                    <svg class="contact-icon">
+                      <use href="./img/icons.svg#icon-map-pin"></use>
+                    </svg>
+                    Вул. Васильківська, 7А Київ, 08132
+                  </a>
+                </li>
+                <li>
+                  <a class="contact-link" href="tel:+380441111111">
+                    <svg class="contact-icon">
+                      <use href="./img/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 044 111 11 11
+                  </a>
+                </li>
+                <li>
+                  <a class="contact-link" href="mailto:barbershop@email.com">
+                    <svg class="contact-icon">
+                      <use href="./img/icons.svg#icon-mail"></use>
+                    </svg>
+                    barbershop@email.com
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    <!-- <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-copyright">
+            <svg class="copyright-icon">
+              <use href="./img/icons.svg#icon-copyright"></use>
+            </svg>
+            <p>Copyright 2023</p>
+          </div>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <a class="socials-link footer-socials" href="#">Instagram</a>
+            </li>
+            <li class="footer-item">
+              <a class="socials-link footer-socials" href="#">Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer> -->
+    <!-- <div class="modal-backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" data-modal-close>
+          <svg class="modal-icon">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <h2>Modal title</h2>
+        <form name="contact-form" autocomplete>
+          <fieldset>
+            <legend>Contact details</legend>
+            <label for="user-name">Name</label>
+            <input type="text" id="user-name" />
+            <label for="user-password">Password</label>
+            <input type="password" id="user-password" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Sizes details</legend>
+            <label for="sizes">Select size:</label>
+            <input list="sizes-list" id="sizes" name="sizes" />
+            <datalist id="sizes-list">
+              <option value="small">Small</option>
+              <option value="medium">Small</option>
+              <option value="large">Small</option>
+            </datalist>
+          </fieldset>
+        </form>
+      </div>
+    </div> -->
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>
