@@ -99,26 +99,75 @@
           </div>
         </div>
       </section>
-      <!-- <section class="section" id="about-section">
+      <section class="section" id="about-section">
         <div class="container">
           <div class="about-container">
             <div class="about-images">
-              <img
-                src="./img/beard.jpg"
-                width="270px"
-                height="445px"
+              <!-- <img
+                srcset="
+                  ./img/beard-270.jpg    270w,
+                  ./img/beard-270@x2.jpg 540w,
+                  ./img/beard-330.jpg    330w,
+                  ./img/beard-330@x2.jpg 660w
+                "
+                sizes="(min-width: 768px) 330px, (min-width: 1200px) 270px"
+                src="./img/beard-330.jpg"
+                width="270"
+                height="445"
                 alt="Beard shaving"
               />
               <img
-                src="./img/hair-cut.jpg"
-                width="270px"
-                height="445px"
+                srcset="
+                  ./img/hair-cut-270.jpg    270w,
+                  ./img/hair-cut-270@x2.jpg 540w,
+                  ./img/hair-cut-330.jpg    330w,
+                  ./img/hair-cut-330@x2.jpg 660w
+                "
+                sizes="(min-width: 768px) 330px, (min-width: 1200px) 270px"
+                src="./img/hair-cut-330.jpg"
+                width="270"
+                height="445"
                 alt="Hair-cut process"
-              />
+              /> -->
+
+              <picture>
+                <source
+                  srcset="./img/beard-270.jpg 1x, ./img/beard-270@x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./img/beard-330.jpg 1x, ./img/beard-330@x2.jpg 2x"
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <img src="./img/beard-330.jpg" alt="Beard shaving" />
+              </picture>
+              <picture>
+                <source
+                  srcset="
+                    ./img/hair-cut-270.jpg    1x,
+                    ./img/hair-cut-270@x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/hair-cut-330.jpg    1x,
+                    ./img/hair-cut-330@x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <img src="./img/hair-cut-330.jpg" alt="Hair-cut process" />
+              </picture>
             </div>
             <div class="about-content">
               <h2 class="section-tagline">Про нас</h2>
-              <p class="section-title">Кращий Барбершоп твого міста</p>
+              <p class="section-title about-title">
+                Кращий Барбершоп твого міста
+              </p>
               <p class="about-subtitle">
                 Якщо ти дійсно хочеш додати у свій образ більше впевненості,
                 тобі точно до нас.
@@ -137,7 +186,7 @@
           </div>
         </div>
       </section>
-      <section class="section services-section" id="services-section">
+      <!-- <section class="section services-section" id="services-section">
         <div class="container">
           <p class="section-tagline section-tagline-light">
             Проведи час у компанії кращих майстрів
@@ -259,7 +308,14 @@
           <ul class="masters-list">
             <li class="masters-item">
               <div class="master">
-                <img class="master-picture" src="./img/john-smith.jpg" alt="" />
+                <img
+                  class="master-picture"
+                  srcset="./img/john-smith.jpg 1x, ./img/john-smith@2x.jpg 2x"
+                  src="./img/john-smith.jpg"
+                  width="370"
+                  height="346"
+                  alt=""
+                />
                 <div class="master-info">
                   <h3 class="master-name">John Smith</h3>
                   <p class="master-job">Extreme Barber</p>

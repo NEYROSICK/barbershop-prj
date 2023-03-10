@@ -79,6 +79,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 ul {
@@ -91,7 +92,19 @@ ul {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 31px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 39px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 
 .visually-hidden {
@@ -536,24 +549,64 @@ ul {
 
 .about-container {
   display: flex;
-  gap: 64px;
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .about-images {
+    gap: 64px;
+  }
 }
 
 .about-images {
-  display: flex;
-  gap: 30px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-images {
+    flex-direction: row;
+  }
+}
+
+.about-title {
+  font-size: 28px;
+  line-height: 1.18;
+}
+
+@media (min-width: 1200px) {
+  .about-title {
+    font-size: 42px;
+    line-height: 1.17;
+  }
 }
 
 .about-subtitle {
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.5;
   margin-bottom: 20px;
-  width: 500px;
+  max-width: 500px;
+}
+
+@media (min-width: 1200px) {
+  .about-subtitle {
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 
 .about-text {
   margin-bottom: 40px;
-  width: 500px;
+  max-width: 500px;
 }
 
 /* Services section */
@@ -613,12 +666,12 @@ ul {
 }
 
 .masters-container {
-  max-width: 418px;
+  max-width: 448px;
 }
 
 @media (min-width: 768px) {
   .masters-container {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 
@@ -651,13 +704,7 @@ ul {
 .master-picture {
   margin: 0 auto;
   width: 100%;
-}
-
-@media (min-width: 786px) {
-  .master-picture {
-    height: 346px;
-    object-fit: cover;
-  }
+  max-height: 346px;
 }
 
 .master-info {
