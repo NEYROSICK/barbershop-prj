@@ -303,24 +303,32 @@ ul {
 
 /* Mobile menu */
 
-.mobile-backdrop {
+.mobile-backdrop,
+.mobile-overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--clr-backdrop-mobile);
-  opacity: 0;
-  visibility: hidden;
+}
+
+.mobile-backdrop {
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .mobile-backdrop.is-open {
-  opacity: 100%;
-  visibility: visible;
   pointer-events: all;
+}
+
+.mobile-overlay {
+  background-color: var(--clr-backdrop-mobile);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mobile-backdrop.is-open > .mobile-overlay {
+  opacity: 100%;
 }
 
 .mobile-modal {
@@ -333,8 +341,7 @@ ul {
   padding: 118px 40px;
   background-color: white;
   transform: translateX(100%);
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out,
-    transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   overflow-y: auto;
 }
 
