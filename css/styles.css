@@ -1452,9 +1452,11 @@ ul {
 /* Scroll button */
 
 #scrollBtn {
-  position: fixed;
+  position: sticky;
+  float: right;
   right: 30px;
-  bottom: 40px;
+  bottom: 30px;
+  margin-top: -25px;
   padding: 8px;
   background-color: var(--clr-brand);
   border: none;
@@ -1469,9 +1471,16 @@ ul {
   opacity: 0;
 }
 
-#scrollBtn:hover {
+#scrollBtn:active {
   background-color: var(--clr-primary-inverted);
   fill: var(--clr-brand);
+}
+
+@media (min-width: 768px) {
+  #scrollBtn:hover {
+    background-color: var(--clr-primary-inverted);
+    fill: var(--clr-brand);
+  }
 }
 
 .scroll-icon {
