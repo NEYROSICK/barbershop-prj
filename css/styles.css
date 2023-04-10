@@ -1449,6 +1449,37 @@ ul {
   fill: currentColor;
 }
 
+/* Scroll button */
+
+#scrollBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  padding: 8px;
+  background-color: var(--clr-brand);
+  border: none;
+  border-radius: 50%;
+  fill: var(--clr-primary-inverted);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: background-color 0.4s ease, fill 0.4s ease, opacity 0.4s ease,
+    visibility 0.4s ease, translate 0.4s ease;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#scrollBtn:hover {
+  background-color: var(--clr-primary-inverted);
+  fill: var(--clr-brand);
+}
+
+.scroll-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
 /* Animation */
 @keyframes shake {
   0%,
