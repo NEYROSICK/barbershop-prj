@@ -1476,7 +1476,7 @@ ul {
   fill: var(--clr-brand);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #scrollBtn:hover {
     background-color: var(--clr-primary-inverted);
     fill: var(--clr-brand);
